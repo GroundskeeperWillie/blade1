@@ -34,10 +34,18 @@ gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 gem 'unicorn'
 
 group :development, :test do 
+  gem 'minitest'
   gem 'rspec-rails', '2.13.1'
   gem 'sqlite3', '1.3.9'
   
 end
+
+group :test do
+   gem 'capybara', '2.1.0'
+   gem 'selenium-webdriver', '2.35.1'
+end
+
+
 
 group :production do
   gem 'pg', '0.15.1'
