@@ -26,6 +26,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+#As advised for rails4 with heroku. Also added unicorn server.
+gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+
+# Use unicorn as the app server
+gem 'unicorn'
 
 group :development, :test do 
   gem 'rspec-rails', '2.13.1'
@@ -42,8 +48,7 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
